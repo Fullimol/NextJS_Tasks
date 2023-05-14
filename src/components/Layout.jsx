@@ -26,7 +26,7 @@ const Layout = (props) => {
                     {show_cancel ? (
                         <button className='transition hover:scale-110 hover:bg-red-500 bg-red-700 px-3 py-2 rounded-xl inline-flex items-center' onClick={() => router.push("/")}>
                             <MdCancel className='mr-2' />
-                            Cancel task
+                            Cancel
                         </button>
                     ) : (
                         <button className='transition hover:scale-110 hover:bg-green-500 bg-green-700 px-3 py-2 rounded-xl inline-flex items-center' onClick={() => router.push("/new")}>
@@ -38,7 +38,7 @@ const Layout = (props) => {
                 </div>
 
             </header>
-            <main className='px-28'>
+            <main className='px-28 py-10'>
                 {children}
             </main>
         </div>
