@@ -29,8 +29,9 @@ const TaskFormPage = () => {
     } else {
       updateTask(query.id, task)
       alert("Task updated")
-      push("/")
+      
     }
+    push("/")
   }
 
   useEffect(() => {

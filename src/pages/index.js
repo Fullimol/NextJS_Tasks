@@ -5,7 +5,7 @@ import { BsFillTrash3Fill } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 
 const Home = () => {
-  const { tasks } = useContext(TaskContext)
+  const { tasks, deleteTask } = useContext(TaskContext)
   const router = useRouter()
 
   console.log(tasks)
@@ -22,7 +22,10 @@ const Home = () => {
                   <div className='flex justify-between'>
                     <h1 className='font-bold'>{task.title}</h1>
 
-                    <button className='rounded-xl bg-red-700 hover:bg-red-600 px-3 py-1 flex items-center'>
+                    <button className='rounded-xl bg-red-700 hover:bg-red-600 px-3 py-1 flex items-center' onClick={(e) => {
+                      e.stopPropagation();
+                      deleteTask(task.id)
+                    }}>
                       <BsFillTrash3Fill className='mr-2' /> Delete </button>
                   </div>
                   <p className='text-gray-300'>{task.description}</p>
