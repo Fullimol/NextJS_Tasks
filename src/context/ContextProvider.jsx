@@ -17,16 +17,16 @@ const ContextProvider = ({ children }) => {
 
   const deleteTask = id => setTasks([...tasks.filter(task => task.id !== id)])
 
-return (
-  <TaskContext.Provider value={{
-    tasks,
-    createTask,
-    updateTask,
-    deleteTask
-  }}>
-    {children}
-  </TaskContext.Provider>
-)
+  return (
+    <TaskContext.Provider value={{
+      tasks,
+      createTask,
+      updateTask,
+      deleteTask
+    }}>
+      {children}
+    </TaskContext.Provider>
+  )
 }
 
 export default ContextProvider

@@ -8,12 +8,10 @@ const Home = () => {
   const { tasks, deleteTask } = useContext(TaskContext)
   const router = useRouter()
 
-  console.log(tasks)
-
   return (
     <Layout>
-      <div className='flex justify-center'>
-        {tasks.length === 0 ? (<h1>No tasks</h1>) : (
+      <div className='flex justify-center align-center'>
+        {tasks.length === 0 ? (<h1 className='bg-red-800'>No tasks</h1>) : (
           <div className='w-7/12'  >
             {tasks.map((task, index) => (
               <div key={task.id} className='bg-gray-700 hover:bg-gray-600 cursor-pointer px-20 py-5 m-2 flex justify-star items-center' onClick={() => router.push(`edit/${task.id}`)}>

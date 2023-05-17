@@ -17,7 +17,6 @@ const TaskFormPage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTask({ ...task, [name]: value });
-    console.log(task)
   };
 
   const handleSubmit = (e) => {
@@ -29,7 +28,6 @@ const TaskFormPage = () => {
     } else {
       updateTask(query.id, task)
       alert("Task updated")
-      
     }
     push("/")
   }

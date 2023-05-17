@@ -38,7 +38,7 @@ const Layout = (props) => {
                 </div>
 
             </header>
-            <main className='px-28 py-10'>
+            <main className='px-28 py-10 bg-gray-900'>
                 {children}
             </main>
         </div>
